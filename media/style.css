@@ -1,11 +1,11 @@
 :root {
     --nice-padding: 6rem;
     --roundness: 0.75rem;
-    --accent1: #02db02;
-    --accent2: #05b305;
+    --accent1: #0092ff;
+    --accent2: #00fcff;
     --accent2_transp: #05b30555;
-    --background1: #212529;
-    --background2: #16191b;
+    --background1: #002c57;
+    --background2: #16537e;
 
 
     color-scheme: dark;
