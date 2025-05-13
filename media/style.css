@@ -240,7 +240,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 2rem;
-    background-color: var(--accent1_transp);
+    background-color: var(--accent1);
     border: 0px;
     border-radius: var(--roundness);
     color: white;
