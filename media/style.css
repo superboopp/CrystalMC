@@ -85,8 +85,8 @@ body {
 
 .desktop_navbar_logo_img {
     width: 5rem;
-    padding-left: auto;
-    padding-right: auto;
+    padding-left: 2rem;
+    padding-right: 1rem;
 }
 
 .desktop_navbar_link {
@@ -268,8 +268,8 @@ body {
     left: 50%;
     transform: translate(-50%, -0%);
     text-align: center;
-    background-color: rgba(0, 175, 0, 0.1);
-    border:solid rgba(0, 175, 0, 1) 1px;
+    background-color: rgba(0, 146, 255, 0.2);
+    border:solid rgba(0, 234, 237, 0.90) 1px;
     color: #fff;
     border-radius: var(--roundness);
     z-index: 9999;
