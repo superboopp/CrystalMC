@@ -603,8 +603,8 @@ body {
 .main3_join_div {
     display: flex;
     flex-direction: column;
-    width: 20rem;
-    height: 8rem;
+    width: auto;
+    height: auto;
     background-color: var(--background2);
     border-radius: var(--roundness);
     margin: 1rem;
