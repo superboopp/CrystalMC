@@ -2,7 +2,7 @@
     --nice-padding: 6rem;
     --roundness: 0.75rem;
     --accent1: #0092ff;
-    --accent2: #00fcff;
+    --accent2: #00eaed;
     --accent2_transp: #05b30555;
     --background1: #002c57;
     --background2: #16537e;
@@ -240,7 +240,7 @@ body {
     padding-left: 2rem;
     padding-right: 2rem;
     font-size: 2rem;
-    background-color: var(--accent2_transp);
+    background-color: var(--accent1_transp);
     border: 0px;
     border-radius: var(--roundness);
     color: white;
