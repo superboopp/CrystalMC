@@ -267,7 +267,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -0%);
-    text-align: center;
+    text-align: top-right;
     background-color: rgba(0, 146, 255, 0.2);
     border:solid rgba(0, 234, 237, 0.90) 1px;
     color: #fff;
@@ -744,3 +744,4 @@ body {
         margin: .25rem;
     }
 }
+
