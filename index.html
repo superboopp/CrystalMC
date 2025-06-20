@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrystalMC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0e1a2b;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #101f33;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #4db8ff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      background-color: #1b2e47;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background-color: #4db8ff;
+      color: #0e1a2b;
+      transform: scale(1.05);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .notice {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .discord-button {
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      background-color: #5865F2;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    .discord-button:hover {
+      background-color: #4752c4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #101f33;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: #a0b3cc;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="#">CrystalMC</a>
+    <div class="nav-links">
+      <a href="#">Vote</a>
+      <a href="https://discord.gg/ZTXRuZ5gGV" target="_blank">Discord</a>
+      <a href="#">Server Info</a>
+      <a href="#">Partners</a>
+    </div>
+  </nav>
+
+  <main>
+    <p class="notice">
+      CrystalMC has been temporarily shut down while we focus on other projects. We will return. Join the discord for updates.
+    </p>
+    <a class="discord-button" href="https://discord.gg/ZTXRuZ5gGV" target="_blank">Join Discord</a>
+  </main>
+
+  <footer>
+    <strong>Not affiliated with any real world brands.</strong>
+  </footer>
+
+</body>
+</html>
