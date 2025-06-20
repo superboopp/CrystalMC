@@ -1,141 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CrystalMC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0e1a2b;
-      color: #ffffff;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0f2c, #111a3e);
+      color: white;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     nav {
+      background: rgba(15, 26, 77, 0.95);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: #101f33;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      flex-wrap: wrap;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 600;
+    .nav-left a {
       color: #4db8ff;
+      font-size: 1.3rem;
+      font-weight: 600;
       text-decoration: none;
     }
 
-    .nav-links {
+    .nav-right {
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .nav-links a {
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
-      background-color: #1b2e47;
-      color: #ffffff;
+    .nav-right a {
       text-decoration: none;
+      color: white;
+      background: linear-gradient(145deg, #1f2d70, #26367e);
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
       transition: all 0.3s ease;
-      font-weight: 500;
+      font-size: 0.85rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      white-space: nowrap;
     }
 
-    .nav-links a:hover {
-      background-color: #4db8ff;
-      color: #0e1a2b;
+    .nav-right a:hover {
+      background: linear-gradient(145deg, #4db8ff, #3f91e5);
+      color: #0a0f2c;
       transform: scale(1.05);
     }
 
     main {
-      flex: 1;
+      flex-grow: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 2rem;
+      background: radial-gradient(circle at center, #0f1a3d 0%, #0a0f2c 100%);
     }
 
     .notice {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin-bottom: 2rem;
+      max-width: 90%;
+      background: rgba(20, 27, 61, 0.95);
+      padding: 2rem;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    .notice p {
+      font-size: 1rem;
       line-height: 1.6;
     }
 
     .discord-button {
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
-      background-color: #5865F2;
-      color: #ffffff;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 1rem;
       display: inline-block;
+      margin-top: 1.5rem;
+      background: linear-gradient(to right, #5865F2, #7983f5);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .discord-button:hover {
-      background-color: #4752c4;
-      transform: scale(1.05);
+      transform: translateY(-2px) scale(1.05);
+      background: linear-gradient(to right, #7983f5, #9da8ff);
     }
 
     footer {
-      background-color: #101f33;
       text-align: center;
       padding: 1rem;
-      font-size: 0.95rem;
-      color: #a0b3cc;
+      background-color: #0f1a4d;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .partner {
+      margin-top: 0.5rem;
+      color: #77c0f7;
+      font-weight: 500;
     }
 
     @media (max-width: 600px) {
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 0.5rem;
-      }
-
       nav {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .nav-right {
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .nav-left a {
+        font-size: 1.1rem;
+      }
+
+      .notice p {
+        font-size: 0.95rem;
+      }
+
+      .discord-button {
+        width: 100%;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-
   <nav>
-    <a class="logo" href="#">CrystalMC</a>
-    <div class="nav-links">
+    <div class="nav-left">
+      <a href="#">CrystalMC</a>
+    </div>
+    <div class="nav-right">
       <a href="#">Vote</a>
-      <a href="https://discord.gg/ZTXRuZ5gGV" target="_blank">Discord</a>
+      <a href="#">Discord</a>
       <a href="#">Server Info</a>
       <a href="#">Partners</a>
     </div>
   </nav>
 
   <main>
-    <p class="notice">
-      CrystalMC has been temporarily shut down while we focus on other projects. We will return. Join the discord for updates.
-    </p>
-    <a class="discord-button" href="https://discord.gg/ZTXRuZ5gGV" target="_blank">Join Discord</a>
+    <div class="notice">
+      <p>CrystalMC has been temporarily shut down while we focus on other projects. We will return. Join the discord for updates.</p>
+      <a class="discord-button" href="https://discord.gg/ZTXRuZ5gGV" target="_blank">Join Discord</a>
+    </div>
   </main>
 
   <footer>
-    <strong>Not affiliated with any real world brands.</strong>
+    Proud partner of <a href=https://pixelatedstory.com class="partner">PixelatedStory</a>
   </footer>
-
 </body>
 </html>
