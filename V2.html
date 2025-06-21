@@ -21,37 +21,45 @@
       .card {
         @apply bg-slate-700 p-6 rounded-2xl shadow-xl;
       }
+        .nav-btn {
+    @apply inline-block px-5 py-2 rounded-xl font-semibold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 hover:scale-105 shadow-md hover:shadow-blue-400/50;
+  }
+
+  .nav-btn.border {
+    @apply bg-transparent text-blue-400 hover:text-white;
+  }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
-    <!-- Navbar -->
-    <header class="flex justify-between items-center px-6 py-4 shadow-lg backdrop-blur-lg bg-slate-900/60 sticky top-0 z-50">
-      <a href="#" class="text-xl font-bold text-blue-400">CrystalMC</a>
-      <nav class="space-x-4 hidden md:flex">
-        <a href="https://crystal-mc.xyz/store_disabled" class="hover:text-blue-300 transition">Store</a>
-        <a href="#discord" class="hover:text-blue-300 transition">Discord</a>
-        <a href="#partners" class="hover:text-blue-300 transition">Partners</a>
-        <a href="https://www.patreon.com/c/VoidStorm" class="hover:text-blue-300 transition">Patreon</a>
-        <a href="https://crystal-mc.xyz/login" class="ml-4 px-3 py-1 border border-blue-400 rounded-lg hover:bg-blue-500 transition">Login</a>
-      </nav>
-      <div class="md:hidden">
-        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
+   <!-- Navbar -->
+<header class="flex justify-between items-center px-6 py-4 bg-slate-900/60 backdrop-blur-lg sticky top-0 z-50 shadow-xl">
+  <a href="#" class="text-2xl font-bold text-blue-400">CrystalMC</a>
+  <nav class="hidden md:flex space-x-4">
+    <a href="https://crystal-mc.xyz/store_disabled" class="nav-btn">Store</a>
+    <a href="#discord" class="nav-btn">Discord</a>
+    <a href="#partners" class="nav-btn">Partners</a>
+    <a href="https://www.patreon.com/c/VoidStorm" class="nav-btn">Patreon</a>
+    <a href="https://crystal-mc.xyz/login" class="nav-btn border border-blue-500">Login</a>
+  </nav>
+  <div class="md:hidden">
+    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>
 
-    <div id="mobile-menu" class="md:hidden hidden px-6 py-4 space-y-2 bg-slate-800">
-      <a href="https://crystal-mc.xyz/store_disabled" class="block">Store</a>
-      <a href="#discord" class="block">Discord</a>
-      <a href="#partners" class="block">Partners</a>
-      <a href="#join" class="block">Join</a>
-      <a href="https://www.patreon.com/c/VoidStorm" class="block">Patreon</a>
-    </div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden px-6 py-4 space-y-3 bg-slate-800">
+  <a href="https://crystal-mc.xyz/store_disabled" class="nav-btn w-full block text-center">Store</a>
+  <a href="#discord" class="nav-btn w-full block text-center">Discord</a>
+  <a href="#partners" class="nav-btn w-full block text-center">Partners</a>
+  <a href="https://www.patreon.com/c/VoidStorm" class="nav-btn w-full block text-center">Patreon</a>
+  <a href="https://crystal-mc.xyz/login" class="nav-btn w-full block text-center border border-blue-500">Login</a>
+</div>
 
     <!-- Hero -->
     <section class="text-center py-20 px-6">
