@@ -1,125 +1,81 @@
-</head>
-
-<body>
-  
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CrystalMC | Minecraft Server</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background: linear-gradient(to right, #0083ff, #1e3a8a); /* dark blue to light blue */
-    }
-  </style>
-</head>
-<body class="text-white font-sans">
-  <header class="text-center p-10 shadow-lg">
-    <h1 class="text-5xl font-extrabold">CrystalMC</h1>
-    <p class="text-xl mt-4">Minecraft Server Panel</p>
-  </header>
-
-  <main class="max-w-md mx-auto mt-10 bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-8 shadow-xl">
-    <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
-    <form class="space-y-6">
-      <div>
-        <label for="username" class="block text-sm font-medium">Username</label>
-        <input type="text" id="username" name="username" required class="mt-1 w-full p-2 rounded bg-white text-black" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrystalMC Login</title>
+    <link rel="icon" href="/media/favicon.ico" type="image/png" />
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .login-card {
+        @apply bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-600 transition-all transform hover:scale-[1.02] hover:shadow-blue-400/40 max-w-md w-full;
+      }
+      .login-card::before {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 hover:opacity-10 transition-opacity duration-300;
+        z-index: 0;
+      }
+      .nav-container {
+        background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .nav-wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+      }
+      .nav-logo {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #3b82f6;
+        text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-logo:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-slate-950 to-slate-800 text-white min-h-screen flex flex-col">
+    <header class="nav-container">
+      <div class="nav-wrapper">
+        <a href="/" class="nav-logo">CrystalMC</a>
       </div>
-      <div>
-        <label for="password" class="block text-sm font-medium">Password</label>
-        <input type="password" id="password" name="password" required class="mt-1 w-full p-2 rounded bg-white text-black" />
+    </header>
+
+    <main class="flex-grow flex items-center justify-center px-6 py-16">
+      <div class="relative login-card">
+        <h2 class="text-2xl font-bold text-center mb-6 text-blue-400">Login to Your Account</h2>
+        <form class="space-y-5">
+          <div>
+            <label for="username" class="block text-sm font-medium mb-1">Username</label>
+            <input id="username" type="text" required class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <div>
+            <label for="password" class="block text-sm font-medium mb-1">Password</label>
+            <input id="password" type="password" required class="w-full p-3 rounded-xl bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+          </div>
+          <button type="submit" class="w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-blue-400 hover:scale-105 transform transition-all shadow-md hover:shadow-blue-500/50">
+            Log In
+          </button>
+        </form>
+        <p class="text-sm text-slate-400 text-center mt-6">
+          Don't have an account?
+          <a href="/register" class="text-blue-400 hover:underline">Register here</a>
+        </p>
       </div>
-      <div class="text-center">
-        <button type="submit" class="button">Login</button>
-<style>button {
-  position: relative;
-  padding: 10px 20px;
-  border-radius: 7px;
-  border: 1px solid rgb(61, 106, 255);
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 2px;
-  background: transparent;
-  color: #fff;
-  overflow: hidden;
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
+    </main>
 
-button:hover {
-  background: rgb(61, 106, 255);
-  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-button:hover::before {
-  -webkit-animation: sh02 0.5s 0s linear;
-  -moz-animation: sh02 0.5s 0s linear;
-  animation: sh02 0.5s 0s linear;
-}
-
-button::before {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 86%;
-  position: absolute;
-  top: 7%;
-  left: 0%;
-  opacity: 0;
-  background: #fff;
-  box-shadow: 0 0 50px 30px #fff;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
-  transform: skewX(-20deg);
-}
-
-@keyframes sh02 {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    left: 100%;
-  }
-}
-
-button:active {
-  box-shadow: 0 0 0 0 transparent;
-  -webkit-transition: box-shadow 0.2s ease-in;
-  -moz-transition: box-shadow 0.2s ease-in;
-  transition: box-shadow 0.2s ease-in;
-}
-</style>
-      </div>
-    </form>
-  </main>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <footer class="text-center mt-10 p-4 bg-blue-900 bg-opacity-60">
-    <p>&copy; 2025 CrystalMC. Not affiliated with Mojang or Microsoft.</p>
-  </footer>
-</body>
+    <footer class="text-center py-6 bg-slate-900 text-sm text-slate-400">
+      <p>&copy; 2025 CrystalMC | Powered by Github Pages</p>
+    </footer>
+  </body>
 </html>
