@@ -45,6 +45,11 @@
         transform: scale(1.05);
         text-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
       }
+      .nav-toggle {
+        display: none;
+        cursor: pointer;
+        color: white;
+      }
       .nav-menu {
         display: flex;
         gap: 1rem;
@@ -64,7 +69,30 @@
         transform: scale(1.08);
         box-shadow: 0 6px 18px rgba(96, 165, 250, 0.5);
       }
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: block;
+        }
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #1e293b;
+          padding: 1rem;
+          position: absolute;
+          top: 100%;
+          left: 0;
+        }
+        .nav-menu.active {
+          display: flex;
+        }
+      }
     </style>
+    <script>
+      function toggleMenu() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+      }
+    </script>
   </head>
   <body class="bg-gradient-to-b from-slate-950 to-slate-800 text-white">
     <div class="bg-amber-500 text-black text-center py-2 font-semibold shadow">🚧 A new CrystalMC website experience is launching soon. Stay tuned!</div>
@@ -72,7 +100,12 @@
     <header class="nav-container">
       <div class="nav-wrapper">
         <a href="#" class="nav-logo">CrystalMC</a>
-        <nav class="nav-menu">
+        <div class="nav-toggle md:hidden" onclick="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </div>
+        <nav class="nav-menu md:flex">
           <a href="#">Store</a>
           <a href="#discord">Discord</a>
           <a href="#partners">Partners</a>
@@ -81,15 +114,6 @@
         </nav>
       </div>
     </header>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-slate-800 space-y-3">
-      <a href="#" class="nav-btn block text-center rounded-full">Store</a>
-      <a href="#discord" class="nav-btn block text-center rounded-full bg-purple-600 hover:bg-purple-500">Discord</a>
-      <a href="#partners" class="nav-btn block text-center rounded-full bg-pink-600 hover:bg-pink-500">Partners</a>
-      <a href="https://www.patreon.com/c/VoidStorm" class="nav-btn block text-center rounded-full bg-yellow-600 hover:bg-yellow-500">Patreon</a>
-      <a href="/login" class="nav-btn block text-center rounded-full border border-blue-400 hover:bg-blue-600">Login</a>
-    </div>
 
     <!-- Hero Section -->
     <section class="text-center py-24 px-6">
