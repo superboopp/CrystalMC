@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrystalMC</title>
+    <meta property="og:title" content="CrystalMC Homepage">
+    <meta property="og:description" content="Start your Minecraft journey with us! Modded SMP | Semi-Vanilla Survival | Partnerships">
+    <link rel="icon" type="image/png" href="/media/favicon.ico" />
+    <style>
+      @import url('https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap');
+
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      .btn {
+        @apply px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition;
+      }
+
+      .card {
+        @apply bg-slate-700 p-6 rounded-2xl shadow-xl;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
+    <!-- Navbar -->
+    <header class="flex justify-between items-center px-6 py-4 shadow-lg backdrop-blur-lg bg-slate-900/60 sticky top-0 z-50">
+      <a href="#" class="text-xl font-bold text-blue-400">CrystalMC</a>
+      <nav class="space-x-4 hidden md:flex">
+        <a href="https://crystal-mc.xyz/store_disabled" class="hover:text-blue-300 transition">Store</a>
+        <a href="#discord" class="hover:text-blue-300 transition">Discord</a>
+        <a href="#partners" class="hover:text-blue-300 transition">Partners</a>
+        <a href="https://www.patreon.com/c/VoidStorm" class="hover:text-blue-300 transition">Patreon</a>
+        <a href="https://crystal-mc.xyz/login" class="ml-4 px-3 py-1 border border-blue-400 rounded-lg hover:bg-blue-500 transition">Login</a>
+      </nav>
+      <div class="md:hidden">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="md:hidden hidden px-6 py-4 space-y-2 bg-slate-800">
+      <a href="https://crystal-mc.xyz/store_disabled" class="block">Store</a>
+      <a href="#discord" class="block">Discord</a>
+      <a href="#partners" class="block">Partners</a>
+      <a href="#join" class="block">Join</a>
+      <a href="https://www.patreon.com/c/VoidStorm" class="block">Patreon</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="text-center py-20 px-6">
+      <img src="/media/logo.png" alt="CrystalMC Logo" class="mx-auto w-48 mb-6">
+      <h1 class="text-4xl font-bold mb-2">Hi there.<br>Welcome to the <span class="text-blue-400">CrystalMC</span> network.</h1>
+      <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
+        <button onclick="copyText('PLAY.CRYSTAL-MC.XYZ')" class="bg-slate-700 p-4 rounded-xl hover:scale-105 transition shadow-lg">
+          <div class="text-lg font-semibold">PLAY.CRYSTAL-MC.XYZ</div>
+          <div class="text-sm text-blue-300">1.21.4 | Paper | Survival</div>
+        </button>
+        <button onclick="copyText('MC.VOID-STORM.COM')" class="bg-slate-700 p-4 rounded-xl hover:scale-105 transition shadow-lg">
+          <div class="text-lg font-semibold">MC.VOID-STORM.COM</div>
+          <div class="text-sm text-blue-300">1.16.5 | Forge | Crazy Craft</div>
+        </button>
+      </div>
+      <p id="copy-msg" class="mt-4 text-green-400 hidden">Copied to clipboard!</p>
+      <script>
+        function copyText(ip) {
+          navigator.clipboard.writeText(ip.toLowerCase());
+          document.getElementById('copy-msg').classList.remove('hidden');
+          setTimeout(() => document.getElementById('copy-msg').classList.add('hidden'), 1500);
+        }
+      </script>
+    </section>
+
+    <!-- Features Section -->
+    <section class="px-6 py-20 bg-slate-800 text-center">
+      <h2 class="text-3xl font-bold mb-10">What We Offer</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="card">
+          <img src="/media/terralith.png" alt="Terralith" class="w-full h-32 object-cover rounded-xl mb-4">
+          <h3 class="text-xl font-semibold mb-2">Terralith</h3>
+          <p>Enhanced world generation for Overworld and caves.</p>
+        </div>
+        <div class="card">
+          <img src="/media/economy.png" alt="Economy" class="w-full h-32 object-cover rounded-xl mb-4">
+          <h3 class="text-xl font-semibold mb-2">Economy</h3>
+          <p>Simple and user-friendly Vault + EssentialsX economy.</p>
+        </div>
+        <div class="card">
+          <img src="/media/graves.png" alt="Graves" class="w-full h-32 object-cover rounded-xl mb-4">
+          <h3 class="text-xl font-semibold mb-2">Graves</h3>
+          <p>Recover items safely at deathpoints with graves.</p>
+        </div>
+        <div class="card">
+          <img src="/media/activestaff.png" alt="Active Staff" class="w-full h-32 object-cover rounded-xl mb-4">
+          <h3 class="text-xl font-semibold mb-2">Active Staff</h3>
+          <p>Friendly and fast support team always ready to help.</p>
+        </div>
+        <div class="card">
+          <img src="/media/spawnersdrop.png" alt="Spawners" class="w-full h-32 object-cover rounded-xl mb-4">
+          <h3 class="text-xl font-semibold mb-2">Droppable Spawners</h3>
+          <p>Mine spawners using silk touch enchantment!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center py-6 bg-slate-900 text-sm text-slate-400">
+      <p>&copy; 2025 CrystalMC | SuperBoopp | Powered by <a href="https://pages.github.com" class="underline">Github Pages</a></p>
+    </footer>
+  </body>
+</html>
