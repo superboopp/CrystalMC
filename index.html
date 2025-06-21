@@ -1,82 +1,107 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CrystalMC</title>
-    <meta property="og:title" content="CrystalMC Homepage">
-    <meta property="og:description" content="Start your Minecraft journey with us! Modded SMP | Semi-Vanilla Survival | Partnerships">
-    <link rel="icon" type="image/png" href="/media/favicon.ico" />
+    <title>CrystalMC | Elevate Your Adventure</title>
+    <meta property="og:title" content="CrystalMC - Premium Minecraft Network">
+    <meta property="og:description" content="Modded SMP, Semi-Vanilla Survival, and more. Join a refined Minecraft experience today.">
+    <link rel="icon" href="/media/favicon.ico" type="image/png" />
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      @import url('https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap');
-
       body {
         font-family: 'Space Grotesk', sans-serif;
       }
-
-      .btn {
-        @apply px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition;
-      }
-
       .card {
-        @apply bg-slate-700 p-6 rounded-2xl shadow-xl;
+        @apply bg-slate-700 p-6 rounded-3xl shadow-xl border border-slate-600 transition-all transform hover:scale-[1.03] hover:shadow-blue-400/40 relative overflow-hidden;
       }
-        .nav-btn {
-    @apply inline-block px-5 py-2 rounded-xl font-semibold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 hover:scale-105 shadow-md hover:shadow-blue-400/50;
-  }
-
-  .nav-btn.border {
-    @apply bg-transparent text-blue-400 hover:text-white;
-  }
+      .card::before {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 hover:opacity-10 transition-opacity duration-300;
+        z-index: 0;
+      }
+      .nav-container {
+        position: relative;
+        z-index: 50;
+        background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .nav-wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.5rem;
+      }
+      .nav-logo {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #3b82f6;
+        text-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-logo:hover {
+        transform: scale(1.05);
+        text-shadow: 0 0 12px rgba(59, 130, 246, 0.7);
+      }
+      .nav-menu {
+        display: flex;
+        gap: 1rem;
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-menu a {
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(to right, #3b82f6, #2563eb);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        transition: all 0.3s ease-in-out;
+      }
+      .nav-menu a:hover {
+        background: linear-gradient(to right, #60a5fa, #3b82f6);
+        transform: scale(1.08);
+        box-shadow: 0 6px 18px rgba(96, 165, 250, 0.5);
+      }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-  <body class="bg-gradient-to-b from-slate-900 to-slate-800 text-white">
-<!-- Alert Banner -->
-<div class="w-full bg-yellow-500 text-black text-center py-2 px-4 font-semibold shadow-md">
-  Heads up! The CrystalMC website will be undergoing a major redesign soon. Expect big changes!
-</div>
+  <body class="bg-gradient-to-b from-slate-950 to-slate-800 text-white">
+    <div class="bg-amber-500 text-black text-center py-2 font-semibold shadow">🚧 A new CrystalMC website experience is launching soon. Stay tuned!</div>
 
-<!-- Navbar -->
-<header class="flex justify-between items-center px-6 py-4 bg-slate-900/60 backdrop-blur-lg sticky top-0 z-50 shadow-xl">
-  <a href="#" class="text-2xl font-bold text-blue-400">CrystalMC</a>
-  <nav class="hidden md:flex space-x-4">
-    <a href="https://crystal-mc.xyz/store_disabled" class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transform transition duration-300 hover:scale-105 shadow-md hover:shadow-blue-500/50">Store</a>
-    <a href="#discord" class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transform transition duration-300 hover:scale-105 shadow-md hover:shadow-purple-500/50">Discord</a>
-    <a href="#partners" class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-pink-600 to-pink-500 hover:from-pink-500 hover:to-pink-400 transform transition duration-300 hover:scale-105 shadow-md hover:shadow-pink-500/50">Partners</a>
-    <a href="https://www.patreon.com/c/VoidStorm" class="px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 transform transition duration-300 hover:scale-105 shadow-md hover:shadow-yellow-500/50">Patreon</a>
-    <a href="https://crystal-mc.xyz/login" class="px-5 py-2 rounded-xl font-semibold text-white border border-blue-400 hover:bg-blue-500 transition duration-300 hover:scale-105 shadow-md hover:shadow-blue-500/50">Login</a>
-  </nav>
-  <div class="md:hidden">
-    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-</header>
+    <header class="nav-container">
+      <div class="nav-wrapper">
+        <a href="#" class="nav-logo">CrystalMC</a>
+        <nav class="nav-menu">
+          <a href="#">Store</a>
+          <a href="#discord">Discord</a>
+          <a href="#partners">Partners</a>
+          <a href="https://www.patreon.com/c/VoidStorm">Patreon</a>
+          <a href="/login">Login</a>
+        </nav>
+      </div>
+    </header>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden hidden px-6 py-4 space-y-3 bg-slate-800">
-  <a href="https://crystal-mc.xyz/store_disabled" class="block w-full text-center px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 transition duration-300 hover:scale-105 shadow-md hover:shadow-blue-500/50">Store</a>
-  <a href="#discord" class="block w-full text-center px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-500 hover:to-purple-400 transition duration-300 hover:scale-105 shadow-md hover:shadow-purple-500/50">Discord</a>
-  <a href="#partners" class="block w-full text-center px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-pink-600 to-pink-500 hover:from-pink-500 hover:to-pink-400 transition duration-300 hover:scale-105 shadow-md hover:shadow-pink-500/50">Partners</a>
-  <a href="https://www.patreon.com/c/VoidStorm" class="block w-full text-center px-5 py-2 rounded-xl font-semibold text-white bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 transition duration-300 hover:scale-105 shadow-md hover:shadow-yellow-500/50">Patreon</a>
-  <a href="https://crystal-mc.xyz/login" class="block w-full text-center px-5 py-2 rounded-xl font-semibold text-white border border-blue-400 hover:bg-blue-500 transition duration-300 hover:scale-105 shadow-md hover:shadow-blue-500/50">Login</a>
-</div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-slate-800 space-y-3">
+      <a href="#" class="nav-btn block text-center rounded-full">Store</a>
+      <a href="#discord" class="nav-btn block text-center rounded-full bg-purple-600 hover:bg-purple-500">Discord</a>
+      <a href="#partners" class="nav-btn block text-center rounded-full bg-pink-600 hover:bg-pink-500">Partners</a>
+      <a href="https://www.patreon.com/c/VoidStorm" class="nav-btn block text-center rounded-full bg-yellow-600 hover:bg-yellow-500">Patreon</a>
+      <a href="/login" class="nav-btn block text-center rounded-full border border-blue-400 hover:bg-blue-600">Login</a>
+    </div>
 
-
-    <!-- Hero -->
-    <section class="text-center py-20 px-6">
-      <img src="/media/logo.png" alt="CrystalMC Logo" class="mx-auto w-48 mb-6">
-      <h1 class="text-4xl font-bold mb-2">Hi there.<br>Welcome to the <span class="text-blue-400">CrystalMC</span> network.</h1>
-      <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-4">
-        <button onclick="copyText('PLAY.CRYSTAL-MC.XYZ')" class="bg-slate-700 p-4 rounded-xl hover:scale-105 transition shadow-lg">
+    <!-- Hero Section -->
+    <section class="text-center py-24 px-6">
+      <img src="/media/logo.png" alt="CrystalMC Logo" class="w-44 mx-auto mb-6 drop-shadow-lg">
+      <h1 class="text-5xl font-bold mb-4 leading-tight">Welcome to <span class="text-blue-400">CrystalMC</span></h1>
+      <p class="text-lg text-slate-300 max-w-xl mx-auto mb-10">Discover premium Minecraft gameplay with rich world generation, custom systems, and an amazing community.</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+        <button onclick="copyText('PLAY.CRYSTAL-MC.XYZ')" class="bg-slate-700 p-4 rounded-full hover:scale-105 transition shadow-lg">
           <div class="text-lg font-semibold">PLAY.CRYSTAL-MC.XYZ</div>
           <div class="text-sm text-blue-300">1.21.4 | Paper | Survival</div>
         </button>
-        <button onclick="copyText('MC.VOID-STORM.COM')" class="bg-slate-700 p-4 rounded-xl hover:scale-105 transition shadow-lg">
+        <button onclick="copyText('MC.VOID-STORM.COM')" class="bg-slate-700 p-4 rounded-full hover:scale-105 transition shadow-lg">
           <div class="text-lg font-semibold">MC.VOID-STORM.COM</div>
           <div class="text-sm text-blue-300">1.16.5 | Forge | Crazy Craft</div>
         </button>
@@ -85,71 +110,71 @@
       <script>
         function copyText(ip) {
           navigator.clipboard.writeText(ip.toLowerCase());
-          document.getElementById('copy-msg').classList.remove('hidden');
-          setTimeout(() => document.getElementById('copy-msg').classList.add('hidden'), 1500);
+          const msg = document.getElementById('copy-msg');
+          msg.classList.remove('hidden');
+          setTimeout(() => msg.classList.add('hidden'), 1500);
         }
       </script>
     </section>
 
-    <!-- Features Section -->
-    <section class="px-6 py-20 bg-slate-800 text-center">
-      <h2 class="text-3xl font-bold mb-10">What We Offer</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <!-- Features -->
+    <section class="px-6 py-24 bg-slate-800 text-center">
+      <h2 class="text-3xl font-bold mb-12">What Makes Us Unique</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         <div class="card">
-          <img src="/media/terralith.png" alt="Terralith" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Terralith</h3>
-          <p>Enhanced world generation for Overworld and caves.</p>
+          <img src="/media/terralith.png" class="w-full h-36 object-cover rounded-2xl mb-4" alt="Terralith">
+          <h3 class="text-xl font-semibold">Terralith World Gen</h3>
+          <p class="text-slate-300">Experience breathtaking landscapes and enhanced terrain generation.</p>
         </div>
         <div class="card">
-          <img src="/media/economy.png" alt="Economy" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Economy</h3>
-          <p>Simple and user-friendly Vault + EssentialsX economy.</p>
+          <img src="/media/economy.png" class="w-full h-36 object-cover rounded-2xl mb-4" alt="Economy">
+          <h3 class="text-xl font-semibold">Refined Economy</h3>
+          <p class="text-slate-300">Simplified trading system using Vault + EssentialsX for balance and fun.</p>
         </div>
         <div class="card">
-          <img src="/media/graves.png" alt="Graves" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Graves</h3>
-          <p>Recover items safely at deathpoints with graves.</p>
+          <img src="/media/graves.png" class="w-full h-36 object-cover rounded-2xl mb-4" alt="Graves">
+          <h3 class="text-xl font-semibold">Death Graves</h3>
+          <p class="text-slate-300">Recover your items safely every time with automatic graves.</p>
         </div>
         <div class="card">
-          <img src="/media/activestaff.png" alt="Active Staff" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Active Staff</h3>
-          <p>Friendly and fast support team always ready to help.</p>
+          <img src="/media/activestaff.png" class="w-full h-36 object-cover rounded-2xl mb-4" alt="Active Staff">
+          <h3 class="text-xl font-semibold">Responsive Staff</h3>
+          <p class="text-slate-300">Friendly support team always available to assist and engage.</p>
         </div>
         <div class="card">
-          <img src="/media/spawnersdrop.png" alt="Spawners" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Droppable Spawners</h3>
-          <p>Mine spawners using silk touch enchantment!</p>
-        </div>
-      </div>
-    </section>
-</section>
-
-    <!-- Partners Section -->
-    <section id="partners" class="px-6 py-20 bg-slate-900 text-center">
-      <h2 class="text-3xl font-bold mb-10">Our Partners</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="card">
-          <img src="/media/pixelatedstory.webp" alt="Pixelated Story" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Pixelated Story</h3>
-          <p>Welcome to Pixelated Story, let's build something amazing together!</p>
-          <a href="https://discord.gg/4vBZ2VqR6g" class="inline-block mt-4 px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition">Join Discord</a>
-        </div>
-        <div class="card">
-          <img src="/media/member_placeholder.webp" alt="Partner Placeholder" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Your Server Here</h3>
-          <p>Partner with us and get featured! Contact us on Discord to get started.</p>
-          <a href="#discord" class="inline-block mt-4 px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition">Contact</a>
-        </div>
-        <div class="card">
-          <img src="/media/member_placeholder.webp" alt="Partner Placeholder" class="w-full h-32 object-cover rounded-xl mb-4">
-          <h3 class="text-xl font-semibold mb-2">Coming Soon</h3>
-          <p>More awesome partners joining the CrystalMC network soon.</p>
+          <img src="/media/spawnersdrop.png" class="w-full h-36 object-cover rounded-2xl mb-4" alt="Spawners">
+          <h3 class="text-xl font-semibold">Silk Spawners</h3>
+          <p class="text-slate-300">Collect and reuse mob spawners with Silk Touch enabled tools.</p>
         </div>
       </div>
     </section>
 
-    <footer class="text-center py-6 bg-slate-900 text-sm text-slate-400">
-      <p>&copy; 2025 CrystalMC | SuperBoopp | Powered by <a href="https://pages.github.com" class="underline">Github Pages</a></p>
+    <!-- Partners -->
+    <section id="partners" class="px-6 py-24 bg-slate-900 text-center">
+      <h2 class="text-3xl font-bold mb-12">Our Trusted Partners</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="card">
+          <img src="/media/pixelatedstory.webp" alt="Pixelated Story" class="w-full h-36 object-cover rounded-2xl mb-4">
+          <h3 class="text-xl font-semibold">Pixelated Story</h3>
+          <p class="text-slate-300">Creative content and immersive storytelling for Minecraft fans.</p>
+          <a href="https://discord.gg/4vBZ2VqR6g" class="inline-block mt-4 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 transition">Join Discord</a>
+        </div>
+        <div class="card">
+          <img src="/media/member_placeholder.webp" alt="Partner Placeholder" class="w-full h-36 object-cover rounded-2xl mb-4">
+          <h3 class="text-xl font-semibold">Your Server Here</h3>
+          <p class="text-slate-300">Become a partner and reach a wider audience. Let’s collaborate!</p>
+          <a href="#discord" class="inline-block mt-4 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 transition">Get in Touch</a>
+        </div>
+        <div class="card">
+          <img src="/media/member_placeholder.webp" alt="Partner Placeholder" class="w-full h-36 object-cover rounded-2xl mb-4">
+          <h3 class="text-xl font-semibold">Coming Soon</h3>
+          <p class="text-slate-300">More collaborations and partner projects launching soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-900 text-center py-6 text-sm text-slate-400">
+      &copy; 2025 CrystalMC | SuperBoopp | Powered by <a href="https://pages.github.com" class="underline">GitHub Pages</a>
     </footer>
   </body>
 </html>
